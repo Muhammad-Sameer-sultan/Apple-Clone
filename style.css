@@ -1,0 +1,519 @@
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url('fonts/FontsFree-Net-SFProText-Regular.ttf') format('truetype');
+    /* Add more font formats here if needed, like woff, woff2, etc. */
+}
+
+/* SF Pro Display */
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('fonts/FontsFree-Net-SFProDisplay-Regular.ttf') format('truetype');
+    /* Add more font formats here if needed, like woff, woff2, etc. */
+}
+
+ 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+:root {
+    --nav-bg-color: rgb(255, 255, 255, 0.5);
+    --primary-black: rgb(0, 0, 0);
+    --primary-white: rgb(255, 255, 255);
+    --link-blue: rgb(41, 151, 255);
+    --foooter-color: rgb(243, 243, 243);
+    --view: none;
+    --drop: blur(0px);
+}
+
+header {
+    width: 100%;
+    background: var(--nav-bg-color);
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+}
+
+.navbar {
+    padding: 1rem 0;
+    position: relative;
+    z-index: 99999;
+
+    background: var(--nav-bg-color);
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nav-item a {
+    text-decoration: none;
+}
+
+.nav-item>a {
+
+    color: var(--primary-black);
+    padding: 0rem 1.2rem;
+    font-size: 0.80rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* <======= hover effect on header ====> */
+
+
+
+.hover-main-container{
+    position: absolute;
+    top:0;
+    width: 100%;
+    z-index: -1;
+
+    /* transition: .7s linear; */
+
+    display: var(--view);
+}
+.blurLayer{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(18px);
+    z-index: -2;
+    display: var(--view);
+}
+/* nav hover button start  */
+.navbar li:nth-child(2):hover ~ .blurLayer,
+.navbar li:nth-child(2):hover ~ #store {
+    display: block;
+}
+.navbar li:nth-child(3):hover ~ .blurLayer,
+.navbar li:nth-child(3):hover ~ #mac {
+    display: block;
+}
+
+.navbar li:nth-child(4):hover ~ .blurLayer,
+.navbar li:nth-child(4):hover ~ #ipad {
+    display: block;
+}
+
+.navbar li:nth-child(5):hover ~ .blurLayer,
+.navbar li:nth-child(5):hover ~ #iphone {
+    display: block;
+}
+
+.navbar li:nth-child(6):hover ~ .blurLayer,
+.navbar li:nth-child(6):hover ~ #watch {
+    display: block;
+}
+
+.navbar li:nth-child(7):hover ~ .blurLayer,
+.navbar li:nth-child(7):hover ~ #vision {
+    display: block;
+}
+
+.navbar li:nth-child(8):hover ~ .blurLayer,
+.navbar li:nth-child(8):hover ~ #airpods {
+    display: block;
+}
+
+.navbar li:nth-child(9):hover ~ .blurLayer,
+.navbar li:nth-child(9):hover ~ #tv {
+    display: block;
+}
+.navbar li:nth-child(10):hover ~ .blurLayer,
+.navbar li:nth-child(10):hover ~ #entertainment {
+    display: block;
+}
+.navbar li:nth-child(11):hover ~ .blurLayer,
+.navbar li:nth-child(11):hover ~ #accessories {
+    display: block;
+}
+.navbar li:nth-child(12):hover ~ .blurLayer,
+.navbar li:nth-child(12):hover ~ #support {
+    display: block;
+}
+
+
+
+/* nav hover end */
+.hover-main-container:hover ~ .blurLayer{
+    display: block;
+}
+.hover-main-container:hover{
+    display: block;
+}
+
+.hover-home-container{
+    padding-top: 40px;
+    /* margin-top: 60px; */
+    background: var(--primary-white);
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    cursor: pointer;
+      
+    z-index: 999;
+}
+
+
+.hover-home-container .hover-home-box{
+    margin-left: 100px;
+    padding: 2rem;
+}
+.hover-home-container .hover-home-box p{
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+    
+}
+
+.hover-home-container .hover-home-box ul{
+    list-style-type: none;
+   
+}
+.hover-home-container .hover-home-box ul li{
+    padding: 0.3rem 0;
+}
+
+.hover-home-container .hover-home-box .hover-list li{
+    font-size: 24px;
+   
+    font-weight: bold;
+    padding: 0.5rem 0;
+}
+
+
+
+.product-1 {
+    width: 100%;
+    height: 90vh;
+    margin-top: 50px ;
+}
+
+.product-1 p {
+    text-align: center;
+    background: var(--nav-bg-color);
+    padding: 0.8rem;
+    font-size: 15px;
+    /* font-weight: 200; */
+}
+
+.product-1 p span {
+    color: var(--link-blue);
+}
+.bg-main{
+    margin-top: 20px;
+}
+.bg-main h2,.bg-main p{
+    color: var(--primary-white) !important;
+}
+.card-image h2{
+    margin-bottom: 3rem ;
+    padding-top: 2rem;
+    
+    
+}
+
+.product-inner {
+    /* position: relative; */
+    background: url('images/iphone14pro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.product-content {
+
+    padding-top: 3rem;
+
+}
+
+.product-inner h2 {
+    font-size: 3.5rem;
+
+}
+
+.product-inner p {
+   
+    font-size: 1.8rem;
+    font-weight: 200;
+    background: transparent;
+}
+
+.product-inner a {
+    color: var(--link-blue);
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 1rem;
+
+}
+
+.product-inner p,
+.product-inner h2 {
+    color: var(--primary-black);
+}
+
+.product-inner-bg-2 {
+    background: url('images/iphone14.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.product-inner-bg-3 {
+    background: url('images/macbookAir15.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.card-inner{
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 0.5rem;
+    position: relative;
+}
+
+
+.card-image{
+    background: url('images/Arcade.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+}
+
+.card-image:hover{
+    cursor: pointer;
+    
+}
+.card-inner .card-img-1{
+
+    background: url('images/giftcard.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.card-inner .card-img-2{
+    background: url('images/ipadpro.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.card-inner .card-img-3{
+    background: url('images/watch.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.card-inner .card-img-4{
+    background: url('images/card.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.card-inner .card-img-5{
+    background: url('images/visionpro.jpg');
+    background-position: center;
+    background-size: cover;
+    position:relative;
+}
+.card-inner .card-img-6{
+    background: url('images/laptop.jfif');
+    background-position: center;
+    background-size: cover;
+}
+.card-img-1 h2{
+    margin: 0 8rem;
+}
+.card-inner h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.card-inner p{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    margin-top: -2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+.card-inner a{
+    font-size: 1.2rem;
+    color: var(--link-blue);
+    text-decoration: none;
+    margin-right: 2rem;
+}
+.card-inner a:hover{
+    text-decoration: underline;
+}
+
+.card-Content-bottom{
+    position: absolute;
+    width: 100%;
+    bottom: 2rem;
+}
+
+.card-img-1 p{
+    margin-top: 2rem;
+
+}
+
+.card-section{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* slider styling */
+/* Set the container size and hide overflow to create a frame for the slider */
+.slider-container {
+    width: 80%;
+    margin: 1rem auto;
+    /* text-align: center; */
+    z-index: -2;
+}
+
+/* Create a horizontal layout for the slides */
+.slides {
+    width: 100%;
+    overflow: hidden;
+    height: 500px;
+    position: relative;
+
+}
+
+/* Ensure images are sized properly within the slider */
+
+ 
+  /* Hide radio buttons */
+  input[type="radio"] {
+    display: none;
+  }
+  
+    
+.slide img {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: fade 12s infinite;
+  }
+
+  .img-1{
+    animation-delay: 0s !important;
+  }
+  .img-2{
+    animation-delay: 3s !important;
+  }
+  .img-3{
+    animation-delay: 6s !important;
+  }
+  .img-4{
+    animation-delay: 9s !important;
+  }
+
+  @keyframes fade {
+    25% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+   
+} 
+  /* Customize navigation style */
+  .navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .navigation label{
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  
+ 
+    
+  
+
+ 
+ 
+
+/*              footer styling */
+footer{
+   
+    margin-top: 2rem;
+    /* background: var(--foooter-color); */
+    padding: 1rem;
+    
+    
+}
+
+.footer-inner{
+    width: 80%;
+    margin: 1rem auto;
+}
+.footer-inner hr{
+    color: grey;
+    margin: 2rem ;
+}
+
+.footer-inner p{
+    color: grey;
+    margin: 0.8rem 0;
+    font-size: 0.85rem;
+}
+
+.footer-link-conatiner{
+    display: flex;
+}
+.footer-link-content{
+    width: 20%;
+}
+.footer-link-conatiner h3{
+    font-size: 0.9rem;
+
+    font-weight: 500;
+}
+
+.footer-link-conatiner ul{
+    list-style-type: none;
+    /* color: gray; */
+    font-size: 0.8rem;
+}
+
+.footer-link-conatiner ul li{
+    font-weight: 550;
+    margin: 0.7rem 0;
+    color: rgb(88, 88, 88);
+}
+.footer-link-conatiner ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+
